@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container" id="container">
+
+        <nav>
+            <div class="search">
+                <img src="icons8-magnifying-glass-tilted-right-48.png" alt="search" class="search-icon" id="search">
+                <input type="text" name="location" id="location" class="input">
+            </div>
+
+            <div class="toggle">
+                <input type="checkbox" id="toggle-switch" aria-hidden="true">
+
+
+                <label class="dark-mode" for="toggle-switch" class="toggle">
+                    <img src="icons8-summer-64.png" alt="lightmode"  class="sun" id="sun">
+                    <div  class="moon"><img src="icons8-full-moon-48.png" alt="darkmode" ></div>
+                </label>
+            </div>
+        </nav>
+        <div class="loader" id="loader">
+            <div id="error" class="error">Couldn't find this location</div>
+        </div>
+        <main>
+            <div class="location-info-div">
+                <span class="location-info" id="location-info">Todays weatther report</span>
+            </div>
+            <div class="center-divs">
+                <div class="main-icon">
+                    <img src="weather.svg" class="weather-icon" id="weather-icon" />
+                </div>
+                <div class="temp">
+                    <span class="weather" id="weather-description">its cloudy</span>
+                    <span class="temperature" id="temp">
+                        <span >29</span><sup>°</sup>
+                    </span>
+                </div>
+                <div class="grid">
+                    <div class="section">
+                        <img src="icons8-wind-100.png" alt="" class="section-img" style=" width: 100%;
+                        aspect-ratio: 3/2;
+                        object-fit: contain;max-width: 80%;">
+                        <section class="grid-events">
+                            <span class="value" id="wind-speed">23km/h</span> <br>
+                            <span class="occourence">wind speed</span>
+                        </section>
+                    </div>
+                    <div class="section">
+                        <img src="icons8-humidity-64.png" alt="" class="section-img" style=" width: 100%;
+                        aspect-ratio: 3/2;
+                        object-fit: contain;max-width: 80%;">
+                        <section class="grid-events">
+                            <span class="value" id="humidity">30%</span> <br>
+                            <span class="occourence">humidity</span>
+                        </section>
+                    </div>
+                    <div class="section">
+                        <img src="icons8-climate-50.png" alt="" class="section-img" style=" width: 100%;
+                        aspect-ratio: 3/2;
+                        object-fit: contain;max-width: 80%;">
+                        <section class="grid-events">
+                            <span class="value" id="cloudiness">23%</span> <br>
+                            <span class="occourence">cloudiness</span>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer">
+            <img src="icons8-google-maps.svg" alt="">
+        </footer>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
